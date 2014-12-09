@@ -1,0 +1,27 @@
+{
+    "name": "dmzx/topicauthor",
+    "type": "phpbb-extension",
+    "description": "This extension will add the topic author to the viewtopic.",
+    "homepage": "http://www.dmzx-web.net",
+    "version": "1.0.0",
+    "time": "2014-11-25",
+	"keywords": ["phpbb", "extension", "topicauthor"],
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "dmzx",
+            "homepage": "http://www.dmzx-web.net",
+			"email": "info@dmzx-web.net",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "extra": {
+        "display-name": "Topic Author",
+        "soft-require": {
+           "phpbb/phpbb": "3.1.*"
+        }
+    }
+}
