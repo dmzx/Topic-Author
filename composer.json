@@ -22,6 +22,11 @@
         "display-name": "Topic Author",
         "soft-require": {
            "phpbb/phpbb": "3.1.*"
+        },
+        "version-check": {
+            "host": "www.phpbb.com",
+            "directory": "/customise/db/extension/topic_author",
+            "filename": "version_check"
         }
     }
 }
