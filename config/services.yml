@@ -1,0 +1,5 @@
+services:
+    dmzx.topicauthor.listener:
+        class: dmzx\topicauthor\event\listener
+        tags:
+            - { name: event.listener }
