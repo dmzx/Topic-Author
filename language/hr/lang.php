@@ -17,4 +17,4 @@ $lang = array();
 
 $lang = array_merge($lang, array(
 'TOPIC_AUTHOR'=>'Autor/ica teme',
-)); 
+));

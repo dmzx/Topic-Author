@@ -16,4 +16,4 @@ if (empty($lang) || !is_array($lang))
 
 $lang = array_merge($lang, array(
 	'TOPIC_AUTHOR'	=> 'Auteur du sujet',
-)); 
+));
