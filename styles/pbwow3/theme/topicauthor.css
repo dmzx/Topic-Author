@@ -1,0 +1,12 @@
+/* Topic Author */
+.topic-author-my {
+  background-color: #ed1c24;
+  border-radius: 0px;
+  color: #ffffff;
+  font-weight: bold;
+  margin: -21px 0 0 -56px;
+  padding: 2px 1px 2px 1px;
+  position: absolute;
+  text-align: center;
+  width: 110px;
+}
