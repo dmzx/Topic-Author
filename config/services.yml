@@ -1,5 +1,7 @@
 services:
     dmzx.topicauthor.listener:
         class: dmzx\topicauthor\event\listener
+        arguments:
+            - '@config'
         tags:
             - { name: event.listener }

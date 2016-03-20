@@ -1,0 +1,35 @@
+<!-- INCLUDEJS @dmzx_topicauthor/jscolor/jscolor.js -->
+<!-- INCLUDE overall_header.html -->
+<h1>{L_ACP_TOPICAUTHOR}</h1>
+
+<p>{L_TOPICAUTHOR_VERSION}{L_COLON} {TOPICAUTHOR_VERSION}</p>
+
+<form id="acp_topicauthor_config" method="post" action="{U_ACTION}">
+	<fieldset>
+	<legend>{L_ACP_TOPICAUTHOR_CONFIG_SET}</legend>
+	<dl>
+		<dt><label for="topicauthor_enable">{L_TOPICAUTHOR_ENABLE}{L_COLON}</label><br />
+		<span>{L_TOPICAUTHOR_ENABLE_EXPLAIN}</span></dt>
+		<dd><label><input type="radio" class="radio" name="topicauthor_enable" value="1"<!-- IF TOPICAUTHOR_ENABLE --> id="topicauthor_enable" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+		<label><input type="radio" class="radio" name="topicauthor_enable" value="0"<!-- IF not TOPICAUTHOR_ENABLE --> id="topicauthor_enable" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label for="topicauthor_colour_field">{L_TOPICAUTHOR_COLOUR_FIELD}{L_COLON}</label><br />
+		<span>{L_TOPICAUTHOR_COLOUR_FIELD_EXPLAIN}</span></dt>
+		<dd><input name="topicauthor_colour_field" type="text" id="topicauthor_colour_field" class="text post color {required:false,caps:false}" value="{TOPICAUTHOR_COLOUR_FIELD}" size="6" maxlength="6" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="topicauthor_text_field">{L_TOPICAUTHOR_TEXT_FIELD}{L_COLON}</label><br />
+		<span>{L_TOPICAUTHOR_TEXT_FIELD_EXPLAIN}</span></dt>
+		<dd><input name="topicauthor_text_field" type="text" id="topicauthor_text_field" class="inputbox autowidth" value="{TOPICAUTHOR_TEXT_FIELD}" maxlength="10" /></dd>
+	</dl>
+	<p class="submit-buttons">
+		<input type="hidden" name="action" value="save" />
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		{S_FORM_TOKEN}
+	</p>
+	</fieldset>
+</form>
+
+<!-- INCLUDE overall_footer.html -->
