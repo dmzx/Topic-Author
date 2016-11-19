@@ -31,6 +31,7 @@ class topicauthor_module
 			$config->set('topicauthor_enable', $request->variable('topicauthor_enable', 0));
 			$config->set('topicauthor_colour_field', $request->variable('topicauthor_colour_field', '', true));
 			$config->set('topicauthor_text_field', $request->variable('topicauthor_text_field', '', true));
+			$config->set('topicauthor_text_colour_field', $request->variable('topicauthor_text_colour_field', '', true));
 
 			trigger_error($user->lang['TOPICAUTHOR_CONFIG_SAVED'] . adm_back_link($this->u_action));
 		}
@@ -40,6 +41,7 @@ class topicauthor_module
 			'TOPICAUTHOR_ENABLE'			=> (!empty($config['topicauthor_enable'])) ? true : false,
 			'TOPICAUTHOR_COLOUR_FIELD'		=> (isset($config['topicauthor_colour_field'])) ? $config['topicauthor_colour_field'] : '',
 			'TOPICAUTHOR_TEXT_FIELD'		=> (isset($config['topicauthor_text_field'])) ? $config['topicauthor_text_field'] : '',
+			'TOPICAUTHOR_TEXT_COLOUR_FIELD'		=> (isset($config['topicauthor_text_colour_field'])) ? $config['topicauthor_text_colour_field'] : '',
 			'U_ACTION'						=> $this->u_action,
 		));
 	}

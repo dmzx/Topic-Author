@@ -3,7 +3,7 @@
 	"type": "phpbb-extension",
 	"description": "This extension will add the topic author to the viewtopic.",
 	"homepage": "http://www.dmzx-web.net",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"time": "2016-03-20",
 	"keywords": ["phpbb", "extension", "topicauthor"],
 	"license": "GPL-2.0",
