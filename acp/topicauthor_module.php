@@ -41,7 +41,7 @@ class topicauthor_module
 			'TOPICAUTHOR_ENABLE'			=> (!empty($config['topicauthor_enable'])) ? true : false,
 			'TOPICAUTHOR_COLOUR_FIELD'		=> (isset($config['topicauthor_colour_field'])) ? $config['topicauthor_colour_field'] : '',
 			'TOPICAUTHOR_TEXT_FIELD'		=> (isset($config['topicauthor_text_field'])) ? $config['topicauthor_text_field'] : '',
-			'TOPICAUTHOR_TEXT_COLOUR_FIELD'		=> (isset($config['topicauthor_text_colour_field'])) ? $config['topicauthor_colour_text_field'] : '',
+			'TOPICAUTHOR_TEXT_COLOUR_FIELD'		=> (isset($config['topicauthor_text_colour_field'])) ? $config['topicauthor_text_colour_field'] : '',
 			'U_ACTION'						=> $this->u_action,
 		));
 	}
