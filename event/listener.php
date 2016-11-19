@@ -45,6 +45,7 @@ class listener implements EventSubscriberInterface
 		$post_row = array_merge($post_row, array(
 			'TOPICAUTHOR_COLOUR'	=> $this->config['topicauthor_colour_field'],
 			'TOPICAUTHOR_TEXT'		=> $this->config['topicauthor_text_field'],
+			'TOPICAUTHOR_TEXT_COLOUR'		=> $this->config['topicauthor_text_colour_field'],
 			'TOPICAUTHOR_ENABLED'	=> $this->config['topicauthor_enable'] ? true : false,
 		));
 		$event['post_row'] = $post_row;

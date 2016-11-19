@@ -41,4 +41,6 @@ $lang = array_merge($lang, array(
 	'TOPICAUTHOR_COLOUR_FIELD_EXPLAIN'	=> 'Click field to select with colour picker.',
 	'TOPICAUTHOR_TEXT_FIELD'			=> 'Topic Author',
 	'TOPICAUTHOR_TEXT_FIELD_EXPLAIN'	=> 'Adjust topic author text.',
+	'TOPICAUTHOR_TEXT_COLOUR_FIELD'			=> 'Select colour',
+	'TOPICAUTHOR_TEXT_COLOUR_FIELD_EXPLAIN'	=> 'Click field to select with colour picker.',
 ));
