@@ -5,7 +5,6 @@
 * @copyright (c) 2016 dmzx - http://www.dmzx-web.net
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
-* Translated By : Bassel Taha Alhitary - www.alhitary.net
 */
 
 if (!defined('IN_PHPBB'))
@@ -34,7 +33,14 @@ if (empty($lang) || !is_array($lang))
 // ’ » “ ” …
 
 $lang = array_merge($lang, array(
-	'ACP_TOPICAUTHOR'						=> 'كاتب الموضوع',
-	'ACP_TOPICAUTHOR_CONFIG_SETTINGS'		=> 'الإعدادات',
-	'ACP_TOPICAUTHOR_CONFIG_SET'			=> 'الضبط',
+	'TOPICAUTHOR_CONFIG_SAVED'				=> 'Topic Author settings saved',
+	'TOPICAUTHOR_VERSION'					=> 'Version',
+	'TOPICAUTHOR_ENABLE'					=> 'Enable Topic Author',
+	'TOPICAUTHOR_ENABLE_EXPLAIN'			=> 'Display in viewtopic.',
+	'TOPICAUTHOR_COLOUR_FIELD'				=> 'Select colour',
+	'TOPICAUTHOR_COLOUR_FIELD_EXPLAIN'		=> 'Click field to select with colour picker.',
+	'TOPICAUTHOR_TEXT_FIELD'				=> 'Topic Author',
+	'TOPICAUTHOR_TEXT_FIELD_EXPLAIN'		=> 'Adjust topic author text.',
+	'TOPICAUTHOR_TEXT_COLOUR_FIELD'			=> 'Select text colour',
+	'TOPICAUTHOR_TEXT_COLOUR_FIELD_EXPLAIN'	=> 'Click field to select with colour picker.',
 ));

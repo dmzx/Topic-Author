@@ -17,4 +17,9 @@
     background-repeat: repeat-x;
 	text-transform: capitalize;
 }
-
+    
+@media (max-width: 700px) {
+	.topic-author {
+		margin: 1px 4px 1px 40px;
+	}
+}

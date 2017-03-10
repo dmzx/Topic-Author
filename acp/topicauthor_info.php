@@ -17,10 +17,11 @@ class topicauthor_info
 			'filename'	=> '\dmzx\topicauthor\acp\topicauthor_module',
 			'title'		=> 'ACP_TOPICAUTHOR',
 			'modes'		=> array(
-			'config'	=> array(
-				'title' => 'ACP_TOPICAUTHOR_CONFIG_SETTINGS',
-				'auth' => 'ext_dmzx/topicauthor && acl_a_board',
-				'cat' => array('ACP_TOPICAUTHOR')),
+				'config'	=> array(
+					'title' => 'ACP_TOPICAUTHOR_CONFIG_SETTINGS',
+					'auth' 	=> 'ext_dmzx/topicauthor && acl_a_board',
+					'cat' 	=> array('ACP_TOPICAUTHOR')
+				),
 			),
 		);
 	}

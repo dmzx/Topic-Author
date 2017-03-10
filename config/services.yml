@@ -1,4 +1,12 @@
 services:
+    dmzx.topicauthor.admin.controller:
+        class: dmzx\topicauthor\controller\admin_controller
+        arguments:
+            - '@config'
+            - '@template'
+            - '@log'
+            - '@user'
+            - '@request'
     dmzx.topicauthor.listener:
         class: dmzx\topicauthor\event\listener
         arguments:

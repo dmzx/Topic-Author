@@ -36,4 +36,6 @@ $lang = array_merge($lang, array(
 	'ACP_TOPICAUTHOR'						=> 'Topic Author',
 	'ACP_TOPICAUTHOR_CONFIG_SETTINGS'		=> 'Settings',
 	'ACP_TOPICAUTHOR_CONFIG_SET'			=> 'Configuration',
+	//Log
+	'LOG_TOPICAUTHOR_SAVED'					=> '<strong>Topic Author configuration updated</strong>',
 ));

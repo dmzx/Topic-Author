@@ -11,38 +11,31 @@ namespace dmzx\topicauthor\acp;
 
 class topicauthor_module
 {
-	var $u_action;
+	public $u_action;
 
 	function main($id, $mode)
 	{
-		global $user, $template, $request, $config;
+		global $phpbb_container, $user;
 
-		$this->tpl_name = 'acp_topicauthor_config';
-		$this->page_title = $user->lang['ACP_TOPICAUTHOR_CONFIG_SETTINGS'];
-		add_form_key('acp_topicauthor_config');
+		// Add the ACP lang file
+		$user->add_lang_ext('dmzx/topicauthor', 'acp_topicauthor');
 
-		$submit = $request->is_set_post('submit');
-		if ($submit)
+		// Get an instance of the admin controller
+		$admin_controller = $phpbb_container->get('dmzx.topicauthor.admin.controller');
+
+		// Make the $u_action url available in the admin controller
+		$admin_controller->set_page_url($this->u_action);
+
+		switch ($mode)
 		{
-			if (!check_form_key('acp_topicauthor_config'))
-			{
-				trigger_error('FORM_INVALID');
-			}
-			$config->set('topicauthor_enable', $request->variable('topicauthor_enable', 0));
-			$config->set('topicauthor_colour_field', $request->variable('topicauthor_colour_field', '', true));
-			$config->set('topicauthor_text_field', $request->variable('topicauthor_text_field', '', true));
-			$config->set('topicauthor_text_colour_field', $request->variable('topicauthor_text_colour_field', '', true));
-
-			trigger_error($user->lang['TOPICAUTHOR_CONFIG_SAVED'] . adm_back_link($this->u_action));
+			case 'config':
+				// Load a template from adm/style for our ACP page
+				$this->tpl_name = 'acp_topicauthor_config';
+				// Set the page title for our ACP page
+				$this->page_title = $user->lang['ACP_TOPICAUTHOR_CONFIG_SETTINGS'];
+				// Load the display options handle in the admin controller
+				$admin_controller->display_options();
+			break;
 		}
-
-		$template->assign_vars(array(
-			'TOPICAUTHOR_VERSION'			=> (isset($config['topicauthor_version'])) ? $config['topicauthor_version'] : '',
-			'TOPICAUTHOR_ENABLE'			=> (!empty($config['topicauthor_enable'])) ? true : false,
-			'TOPICAUTHOR_COLOUR_FIELD'		=> (isset($config['topicauthor_colour_field'])) ? $config['topicauthor_colour_field'] : '',
-			'TOPICAUTHOR_TEXT_FIELD'		=> (isset($config['topicauthor_text_field'])) ? $config['topicauthor_text_field'] : '',
-			'TOPICAUTHOR_TEXT_COLOUR_FIELD'		=> (isset($config['topicauthor_text_colour_field'])) ? $config['topicauthor_text_colour_field'] : '',
-			'U_ACTION'						=> $this->u_action,
-		));
 	}
 }
